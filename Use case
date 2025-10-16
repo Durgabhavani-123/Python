@@ -1,0 +1,74 @@
+Here’s a Python program for Use Case 1: Finding the Winning Strategy in a Card Game — it uses basic logic to determine which player wins based on the highest card value.
+
+
+---
+
+🃏 Python Program: Finding the Winning Strategy in a Card Game
+
+# Use Case 1: Finding the Winning Strategy in a Card Game
+
+# Define a dictionary of card values
+card_values = {
+    "2": 2, "3": 3, "4": 4, "5": 5, "6": 6,
+    "7": 7, "8": 8, "9": 9, "10": 10,
+    "J": 11, "Q": 12, "K": 13, "A": 14
+}
+
+# Function to determine the winner
+def find_winner(player1_cards, player2_cards):
+    # Calculate total value for each player
+    player1_score = sum(card_values[card] for card in player1_cards)
+    player2_score = sum(card_values[card] for card in player2_cards)
+
+    print(f"Player 1 cards: {player1_cards} → Total = {player1_score}")
+    print(f"Player 2 cards: {player2_cards} → Total = {player2_score}")
+
+    # Determine who wins
+    if player1_score > player2_score:
+        print("🏆 Player 1 wins the game!")
+    elif player2_score > player1_score:
+        print("🏆 Player 2 wins the game!")
+    else:
+        print("🤝 It's a tie!")
+
+# Example input
+player1 = ["A", "10", "5"]
+player2 = ["K", "9", "7"]
+
+# Call the function
+find_winner(player1, player2)
+
+
+---
+
+💡 Explanation
+
+1. Each card (2–A) is assigned a numeric value.
+
+
+2. Each player holds a set of cards.
+
+
+3. The program calculates the total score for each player.
+
+
+4. The player with the higher total value wins.
+
+
+5. In case of a tie, it prints “It’s a tie!”.
+
+
+
+
+---
+
+🧩 Sample Output
+
+Player 1 cards: ['A', '10', '5'] → Total = 29
+Player 2 cards: ['K', '9', '7'] → Total = 29
+🤝 It's a tie!
+
+
+---
+
+Would you like me to make it more interactive (e.g., players enter cards manually)?
